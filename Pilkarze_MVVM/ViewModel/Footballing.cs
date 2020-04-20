@@ -22,6 +22,7 @@ namespace Pilkarze_MVVM.ViewModel
         {
             ReadList();
         }
+
         #region Interfejs publiczny 
         private string _firstArg = null;
         public string FirstArg {
@@ -105,6 +106,7 @@ namespace Pilkarze_MVVM.ViewModel
         }
 
         #endregion
+
         #region Polecenia
 
         #region polecenie dodania Pilkarza
@@ -189,7 +191,6 @@ namespace Pilkarze_MVVM.ViewModel
             }
         }
         #endregion
-
         #region polecenie odpoiwedzialne za usuwanie  
         private ICommand _delete = null;
         public ICommand Delete
@@ -238,6 +239,8 @@ namespace Pilkarze_MVVM.ViewModel
         {
             FirstArg = "";
             SecondArg = "";
+            Age = 20;
+            Weight = 80;
         }
         #endregion
         #region metody odpowiedzialne za serializacje

@@ -44,27 +44,6 @@ namespace Pilkarze_MVVM.Model
         {
             return $"{Nazwisko} {Imie} lat: {Wiek} waga: {Waga} kg";
         }
-
-        public string ToFileFormat()
-        {
-            return $"{Nazwisko}|{Imie}|{Wiek}|{Waga}";
-        }
-
-        public static Footballer CreateFromString(string sPilkarz)
-        {
-            string imie, nazwisko;
-            uint wiek, waga;
-            var pola = sPilkarz.Split('|');
-            if (pola.Length == 4)
-            {
-                nazwisko = pola[0];
-                imie = pola[1];
-                wiek = uint.Parse(pola[2]);
-                waga = uint.Parse(pola[3]);
-                return new Footballer(imie, nazwisko, wiek, waga);
-            }
-            throw new Exception("Błędny format danych z pliku");
-        }
         #endregion
     }
 }
